@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="mouse, key board, PC, Laptop"/>
+	<meta name="author" content="BaoNT-SE05601"/>
+	<meta name="description" content="Best Online Market"/>
+    <title>Đặt hàng trực tuyến - GG Market || Mua hàng trực tuyến tốt nhất</title>
+    <link rel="stylesheet" type="text/css" href="css/project.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/project.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Begin Header -->
+
+    <div class="header">
+        <a href="homePage.html"><img src="source/logo-1.png" alt="Logo" class="logo"></a>
+        <input type="text" class="search" placeholder="Tìm sản phẩm, thương hiệu bạn mong muốn..."><input type="button" class="search-bt" value="Tìm kiếm"> 
+        <div class="hdmn">
+            <a href="#"><img  src="source/news.png" alt="Discount" ><br/><span class="hd-text">Khuyến mãi</span></a>       
+        </div> 
+        <div class="hdmn2">
+            <a href="#"><img  src="source/news2.png" alt="News" ><br/><span class="hd-text">Tin hay</span></a>       
+        </div>  
+        <div class="hdmn3">
+            <a href="#"><img  src="source/giohang.png" alt="Bags" ><br/><span class="hd-text">Quan tâm</span></a>       
+        </div> 
+        <div class="hd-nav">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid"> 
+                    <ul class="nav navbar-nav">
+                        <li class="nav-fix nav-fix-item"><a href="homePage.html"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                        <li class="dropdown nav-fix-item"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Điện Thoại <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="homePage.html#phone">Iphone</a></li>
+                                <li><a href="homePage.html#phone">SAMSUNG</a></li>
+                                <li><a href="homePage.html#phone">HTC</a></li>
+                                <li><a href="homePage.html#phone">OPPO</a></li>
+                                <li><a href="homePage.html#phone">Xiao Mi</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown nav-fix-item"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Laptop <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="homePage.html#laptop">Dell</a></li>
+                                <li><a href="homePage.html#laptop">ASUS</a></li>
+                                <li><a href="homePage.html#laptop">Macbook</a></li>
+                                <li><a href="homePage.html#laptop">MSI</a></li>
+                                <li><a href="homePage.html#laptop">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown nav-fix-item"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tablet <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">iPad</a></li>
+                                <li><a href="#">SAMSUNG</a></li>
+                                <li><a href="#">Lenovo</a></li>
+                                <li><a href="#">Huawei</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown nav-fix-item"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Phụ Kiện <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="homePage.html#pk">Tai Nghe</a></li>
+                                <li><a href="homePage.html#pk">Chuột</a></li>
+                                <li><a href="homePage.html#pk">Bàn Phím</a></li>
+                                <li><a href="homePage.html#pk">Miếng Dán Màn Hình</a></li>
+                                <li><a href="homePage.html#pk">Ốp lưng</a></li>
+                                <li><a href="homePage.html#pk">Loa</a></li>
+                                <li><a href="homePage.html#pk">Sạc Cáp</a></li>
+                                <li><a href="homePage.html#pk">Phần Cứng</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-fix-item"><a href="FeedBack.html"><span class="glyphicon glyphicon-user"></span> Phản Hồi</a></li>
+                        <li class="active nav-fix2 nav-fix-item"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đặt Hàng</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="fix-header"> </div>
+
+    <!-- End of Header  -->
+
+    <!-- content -->
+
+    <div class="content-contain">
+        <div class="content fix-content fix-content-od">
+            <div class="od-tb">
+                <span class="od-dh">Đặt Hàng</span>
+                <br/>
+                <br/>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="msp">Mã sản phẩm:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="msp" placeholder="Mã sản phẩm" onkeyup="checkProductID()">
+                            
+                            <span class="err" name="error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="sl">Số lượng:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="sl" placeholder="Số lượng" onkeyup="inputQuality()">
+                           
+                            <span class="err" name="error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="tt">Thành tiền:</label>
+                        <div class="col-sm-9">
+                            <label class="control-label" for="tt"><span class="fix-lb" name="error">0 đ</span></label>                                   
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="name">Họ và Tên:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" placeholder="Họ và tên">                           
+                            <span class="err" name="error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="sdt">Số điện thoại:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="sdt" placeholder="Số điện thoại">
+                            
+                            <span class="err" name="error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="email">E-mail:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email" placeholder="E-mail">
+                            
+                            <span class="err" name="error"></span>
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="tinh">Tỉnh thành:</label>
+                        <div class="col-sm-9">
+                            <select class="form-control">
+                                <option selected>Hà Nội</option>
+                                <option>Đà Nẵng</option>
+                                <option>Hồ Chí Minh</option>                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="add">Địa chỉ:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="add" placeholder="Địa chỉ">
+                           
+                            <span class="err" name="error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="ttoan">Hình thức thanh toán:</label>
+                        <div class="col-sm-9">
+                            <select class="form-control">
+                                <option selected>Tiền mặt</option>
+                                <option>Thẻ ATM</option>
+                                <option>Thẻ tín dụng</option>                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">        
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="checkbox"> Xác nhận đặt hàng</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-danger btn-lg btn-dh" onclick="myFunction()">XÁC NHẬN</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+    <!-- Footer  -->
+    <div class="fix-footer"></div>
+    <div class="footer">
+        <div class="ft-text">
+            <p class="rs fw-com">Công ty cổ phần GG Market</p>
+            <p class="rs fw-dt">Copyright © 2018. All rights reserved.</p>
+            <p class="rs fw-dt">Địa chỉ: Đại Học FPT - Khu công nghệ cao Hòa Lạc - Km 29 Đại lộ Thăng Long, Thạch Hòa, Thạch Thất, Hà Nội.</p>
+            <p class="rs fw-dt">Điện thoại: 0165.375 4567 - Fax: 04 132456879 - Email: <a href="mailto:baontse05601@fpt.edu.vn">baontse05601@fpt.edu.vn</a></p>            
+        </div>
+        <div class="ft-img">
+            <img src="source/dadangky.png" width="160px">
+            <img src="source/logo_big.png" width="160px">
+        </div>
+    </div>
+</body>
+</html>

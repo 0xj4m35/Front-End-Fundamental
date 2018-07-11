@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head></head>
+
+<body>
+  <canvas id="myCanvas" width="300" height="200" style="border: 1px solid #000;">
+  </canvas>
+  <script>
+    const WIDTH = 300,
+      HEIGHT = 200;
+    function Cirle(size, x, y) {
+      this.size = size;
+      this.x = x;
+      this.y = y;
+      this.speed = 1;
+      this.angle = Math.PI / 4;
+    }
+    Cirle.prototype.draw = function (ctx) {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+      ctx.stroke();
+    }
+    Cirle.prototype.move = function () {
+      var x = this.x;
+      var y = this.y;
+      x += this.speed * Math.sin(this.angle);
+      y += this.speed * Math.cos(this.angle);
+      if (parseInt(x - this.size) === 0 || parseInt(x + this.size) === WIDTH) {
+        // left & right
+        this.angle *= -1;
+      }
+    
+      if (parseInt(y - this.size) === 0 || parseInt(y + this.size) === HEIGHT) {
+        // top & bottom
+        this.angle = Math.PI - this.angle;
+      }
+     
+      this.x = x;
+      this.y = y;
+    }
+
+    var c = document.getElementById('myCanvas');
+    var ctx = c.getContext('2d');
+    var ball = new Cirle(10, 15, HEIGHT/2);
+    setInterval(() => {
+      ctx.clearRect(0, 0, c.width, c.height);
+      ball.draw(ctx, 20, 30);
+      ball.move();
+    }, 1000 / 120);
+
+  </script>
+</body>
+
+</html>

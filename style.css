@@ -1,0 +1,70 @@
+/*html/context selection*/
+		img {opacity: 1;}
+		img:hover {opacity: 0.5;}
+		/*ID */
+		#water {
+			color: blue;
+			font-size: xx-large;
+		}
+		/*Class*/
+		.water{
+			color: red;
+			text-transform: uppercase;
+		}
+		div.top {
+			background-color: black;
+			padding: 16px;
+			text-align: center;
+			color: white;
+
+		}
+		div.menu{
+			background-color: black;
+			padding: 8px 16px;
+			margin-top: 2px; 
+		}
+
+		div.left {
+			width: 20%;
+			background-color: tomato;
+			color: white;
+			height: 300px;
+			float: left;
+
+		}
+		div.content {
+			width: *;
+			background-color: SlateBlue;
+			color: white;
+			height: 300px;
+			
+		}
+		div.footer {
+			background-color: black;
+			color: white;
+			text-align: left;
+			height: 40px;
+			clear: both;
+			font-style: italic;
+
+		}
+
+		div.bottom {
+			position: fixed;
+			border: solid 1px green;
+			width: 120px;
+			height: 40px;
+			bottom: 0px;
+			right: 0px;
+		}
+
+		ul li a {
+			text-decoration: none;
+			color: white;
+
+		}
+
+		ul li {
+			display: inline;
+			padding: 8px 16px;
+		}

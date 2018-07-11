@@ -1,0 +1,34 @@
+div.outer {
+	border: 2px solid orange;
+	border-radius: 5px;
+	padding: 15px 15px;
+	width: 98%
+}
+
+div.inner {
+	border: 2px solid orange;
+	border-radius: 5px;
+	padding: 0px 15px;
+	width: 30%;
+}
+
+td, tr {
+	float: top;
+}
+
+span.cl {
+	color: blue;
+}
+.und {
+	text-decoration: underline;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: orange;
+}
+
+

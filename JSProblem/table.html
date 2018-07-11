@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 10px auto;
+        }
+        table {
+            width: 800px;
+            border: solid 1px black;
+            border-spacing: 0px;
+        }
+        tr td {
+            border: solid 1px black;
+            text-align: center;
+        }
+        span {
+            color: red;
+            font-weight: italic;
+        }
+        div {
+            display: none;
+        }
+        .defTb {
+            border: none;
+            width: 400px;
+        }
+        .def {
+            border: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <table id="table">
+        <caption>A typical HTML table</caption>
+        <thead>
+            <td><strong>Class Name:</strong></td>
+            <td><strong>Room Number:</strong></td>
+            <td><strong>Subject:</strong></td>
+        </thead>
+    </table>
+
+    <p>Click to delete the first row.</p>
+    <input type="button"  value="Delete" onclick="delRow()">
+    <span id="delError"></span>
+    <p>Click to add a new row.</p>
+    <input type="button"  value="New Row" onclick="show()">
+    <div id="addDiv" >
+        <table class="defTb">
+            <tr>
+                <td class="def"><strong>Class Name:</strong></td>
+                <td class="def"><input type="text" id="name" placeholder="Class Name"></td>
+            </tr>
+            <tr>
+                <td class="def"><strong>Room Number:</strong></td>
+                <td class="def"><input type="text" id="room" placeholder="Room Number"></td>
+            </tr>
+            <tr>
+                <td class="def"><strong>Subject:</strong></td>
+                <td class="def"><input type="text" id="subj" placeholder="Subject"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="def"><input type="button" value="ADD" onclick="add()"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    var row = 1;
+    function show() {
+        var x = document.getElementById("addDiv");
+            x.style.display = "block";
+    }
+    function add() {
+        var name = document.getElementById("name").value;
+        var room = document.getElementById("room").value;
+        var subj = document.getElementById("subj").value;
+
+        var table = document.getElementById("table");
+        var new_row = table.insertRow(row++);
+        new_row.insertCell(0).innerHTML = name;
+        new_row.insertCell(1).innerHTML = room;
+        new_row.insertCell(2).innerHTML = subj;
+
+        document.getElementById("name").value = "";
+        document.getElementById("room").value = "";
+        document.getElementById("subj").value = "";
+        var x = document.getElementById("addDiv");
+        x.style.display = "none";
+    }
+    function delRow() {
+        if (row == 1) {
+            var x = document.getElementById("delError");
+            x.innerHTML = "The Table doesn't have any Row to Delete!";
+        }
+        else {
+            document.getElementById("delError").innerHTML = "";
+            var table = document.getElementById("table");
+            table.deleteRow(1);
+            row --;
+        }
+    }
+
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery</title>
+    <script src="jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <p>Click the button to hide me</p>
+    <button>Click me</button>
+</body>
+</html>
+<script type="text/javascript">
+    var x = true;
+    $(document).ready(function(){
+        $('button').click(function() {
+            if (x == true){
+                $('p').hide();
+                $('h1').css("font-size", "+=10px");
+                $('h1').css("color", "blue");
+                x = false;
+            } else {
+                $('p').show();
+                $('h1').css("font-size", "-=10px");
+                $('h1').css("color", "black");
+                x = true;
+            }
+            
+        })
+    })
+</script>

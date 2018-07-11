@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="keywords" content="lab02,form"/>
+	<meta name="author" content="BaoNT"/>
+	<meta name="description" content="Lab 02"/>
+	<title>LAB 02</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<p class="heading">Interview Feedback</p>
+	<p class="bold2">This type of form may be an easy way to consolidate/standardize </p> 
+	<p class="bold2">feedback on interview candidates.</p>
+	<br/>
+	<p class="bold">
+		Candidate Name 
+		<input type="text" name="candidatesName">
+		Position Applied For 
+		<input type="text" name="positionAF">
+	</p>
+	<table>
+		<tr>
+			<td>
+				<p class="bold">Education Level</p>
+				<select name="slcEL">
+					<option selected>1)High School</option>
+					<option>2)Bachelors Degree</option>
+					<option>3)Masters Degree</option>
+					<option>4)Doctoral Degree</option>
+					<option>5)Professional Certification</option>
+				</select>
+			</td>
+			<td>
+				<p class="bold">Candidate is a good fit for the position</p>
+				<input type="radio" name="canPo">Agree
+				<br/>
+				<input type="radio" name="canPo">Somewhat Agree
+				<br/>
+				<input type="radio" name="canPo">Neutral
+				<br/>
+				<input type="radio" name="canPo">Somewhat Disagree
+				<br/>
+				<input type="radio" name="canPo">Disagree
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<span class="bold">Should we hire this condidate?</span>
+				<input type="radio" name="hire">Yes
+				<input type="radio" name="hire">No
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<span class="bold">Comments</span>
+				<textarea name="comments" cols="20" rows="3" ></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="ali">
+				<input type="submit" name="submit" value="Submit">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

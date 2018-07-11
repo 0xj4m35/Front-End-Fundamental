@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas OOP</title>
+    <style type="text/css">
+		canvas {
+			border: solid 1px gray;
+			background-color: white;
+			width: 300px;
+			height: 200px; 
+		}
+	</style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    function component(x, y, width, height, color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.draw = function() {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, width, height);
+        }
+
+        this.move = function(dir) {
+            if (dir == "up")
+                y -=1;
+            if (dir == "down")
+                y += 1;
+            if (dir == "left")
+                x -= 1;
+            if (dir == "right")
+                x += 1;
+        }
+
+        this.clear = function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        this.update = function(dir) {
+            this.clear();
+            this.move(dir);
+            this.draw();
+        }
+    }
+
+    var box = new component(0, 60, 30, 30, "tomato");
+    box.draw();
+    setInterval(updateGame, 20);
+
+    function updateGame() {
+        box.update("right");
+    }
+
+    var box2 = new component(270, 60, 30, 30, "green");
+    box2.draw();
+    setInterval(updateGame2, 20);
+
+    function updateGame2() {
+        box2.update("left");
+    }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX4</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    String.prototype.subString = function() {
+        var sub = [];
+        for (var i = 0; i < this.length; i++) {
+            for (var j = i+1; j<this.length+1; j++) {
+                sub.push(this.slice(i,j));
+            }
+        }
+        return sub;
+    };
+
+    console.log("dog".subString());
+</script>

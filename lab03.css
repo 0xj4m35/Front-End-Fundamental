@@ -1,0 +1,17 @@
+span:first-child {
+	background-color: yellow;
+}
+
+span:last-child {
+	background-color: yellow;
+}
+
+p.flt:first-letter {
+	font-size: 200%;
+	vertical-align: middle;
+}
+
+tr td {
+	padding: 40px 40px;
+	border: 3px double gray;
+}

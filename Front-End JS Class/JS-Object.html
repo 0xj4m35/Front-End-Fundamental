@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>JS Object</title>
+</head>
+<body>
+    <p id="name"></p>
+</body>
+</html>
+<script>
+    var person = new Object();
+
+    person.fname = "Bao";
+    person.lname = "Nguyen";
+
+    person.full_name = function() {
+        x = this.fname + " " + this.lname;
+        console.log(this.fname + " " + this.lname);
+    }
+
+    person.full_name();
+</script>

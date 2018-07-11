@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		CSS Demo
+	</title>
+	<style type="text/css">
+		p {
+			border: 5px dotted #209f1b;
+			margin-top: 20px;
+			margin-left: 20px;
+			padding: 10px 15px;
+			width: 20%;
+		}
+		.tag-p1 {
+			border: 5px solid black;
+			margin-top: 20px;
+			margin-left: 20px;
+			padding: 10px 15px;
+		}
+
+		.tag-active {
+			color: yellow;
+		}
+
+		#abc {
+			color: red;
+		}
+		body {
+			background-color: lightblue;
+		}
+
+		.block-1 {
+			background-color: red;
+		/*	display: inline-block;*/
+			display: flex;
+			flex: 1;
+		}
+		.block-2 {
+			background-color: green;
+		/*	display: inline-block;*/
+			display: flex;
+			flex: 2;
+		}
+		.block {
+			display: flex;
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+	<p class="tag-p1 tag-active">
+	 	Hello world!
+	</p>
+	<p id="abc">
+	 	Hello world! 2
+	</p>
+	<p>
+	 	Hello world! 3
+	</p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<div class="block-1">
+		Block 1
+	</div>
+	<div class="block-2">
+		Block 2
+	</div>
+	<div class="block-1">
+		Block 3
+	</div>
+	<br/>
+	<div class="block">
+		<div class="block-1">
+		Block 1
+	</div>
+	<div class="block-2">
+		Block 2
+	</div>
+	<div class="block-1">
+		Block 3
+	</div>
+	</div>
+</body>
+</html>

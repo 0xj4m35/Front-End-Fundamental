@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #game-container {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #000;
+        float: left;
+      }
+      #game-container li {
+        background-color: #000;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #fff;
+      }
+      #game-container li {
+        float: left;
+      }
+      #game-container li:nth-child(3n + 1) {
+        clear: both;
+      }
+      #game-container .blank {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="game-container">
+      <li data-id="0" data-row="0" data-col="0" class="blank"></li>
+      <li data-id="1" data-row="0" data-col="1"></li>
+      <li data-id="2" data-row="0" data-col="2"></li>
+      <li data-id="3" data-row="1" data-col="0"></li>
+      <li data-id="4" data-row="1" data-col="1"></li>
+      <li data-id="5" data-row="1" data-col="2"></li>
+      <li data-id="6" data-row="2" data-col="0"></li>
+      <li data-id="7" data-row="2" data-col="1"></li>
+      <li data-id="8" data-row="2" data-col="2"></li>
+    </ul>
+
+    <script>
+    
+      const size = 3;
+      var currentId = 0, currentRow = 0, currentCol = 0;
+      var gameContainer = document.getElementById('game-container');
+      var cells = document.querySelectorAll('#game-container li');
+
+      console.log(cells);
+
+      function changeBgColor() {
+        var id = this.dataset.id;
+        var row = parseInt(this.dataset.row);
+        var col = parseInt(this.dataset.col);
+
+        if (row === currentRow || col === currentCol)
+             {
+          cells[currentId].style.backgroundColor = '#000';
+          currentId = id;
+          currentRow = row;
+          currentCol = col;
+          cells[currentId].style.backgroundColor = '#fff';
+        }
+      }
+
+      for (i = 0; i < cells.length; i++) {
+        cells[i].addEventListener('click', changeBgColor);
+      }
+    </script>
+  </body>
+</html>

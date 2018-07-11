@@ -1,0 +1,38 @@
+p.heading {
+	text-align: center;
+	font-weight: bold;
+	font-size: xx-large;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+p.bold2 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+body {
+	width: 800px;
+	font-family: "Comic Sans MS", Impact, sans-serif;
+}
+
+p {
+	line-height: 0.2;
+}
+input.text {
+	width: 100px;
+}
+
+td {
+	vertical-align: top;
+}
+
+td.ali {
+	text-align: center;
+}
+
+td {
+	padding-top: 15px;
+}

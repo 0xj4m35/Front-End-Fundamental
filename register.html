@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="keywords" content="fu,fpt,fptu"/>
+	<meta name="author" content="BaoNT"/>
+	<meta name="description" content="Intro html"/>
+	<title>FPT University</title>
+</head>
+<body>
+	<fieldset style="width: 300px">
+		<legend>User's Information</legend>
+		<form name="mform" action="doregister.html" method="POST">
+			<table>
+				<tr>
+					<td>User's name: </td>
+					<td><input type="text" name="userName" placeholder="your username" autofocus onfocus="this.style.backgroundColor='yellow';" onblur="this.style.backgroundColor='white';" /></td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td><input type="Password" name="userPassword" placeholder="your password" /></td>
+				</tr>
+				<tr>
+					<td>Gender: </td>
+					<td><input type="radio" name="radGender" checked/>Male
+						<input type="radio" name="radGender"/>Female
+					</td>
+				</tr>
+				<tr>
+					<td>Address: </td>
+					<td><textarea name="txtAddress" rows="8" cols="23" placeholder="Enter your Address here!"></textarea></td>
+				</tr>
+				<tr>
+					<td>Select Roles:</td>
+					<td><select name="slcRole">
+						<option>Edit</option>
+						<option>Add</option>
+						<option selected>--Select--</option>
+						<optgroup>Admin Group</optgroup>
+						<option>Assign role</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="checkbox" name="chkTerm">
+						Agree our Terms.
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" name="btnSend" value="Send"/>
+						<input type="button" name="btnSave" value="Save"/>
+						<input type="reset" name="btnClear" value="Clear"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date</title>
+    <style>
+        .today {
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .out-od {
+            color: blue;
+            font-style: italic;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <p class="today" id="td-date"></p>
+    <p>Select a date to make an order <input type="date" id="sl-date" value="2018-01-01"> <input type="button" value="Submit" onclick="order()"> <input type="button" value="Clear" onclick="clearDate()"> </p>
+    <p class="out-od" id="order"></p>
+</body>
+</html>
+<script type="text/javascript">
+    var today = new Date();
+    var day = today.getDate();
+    var month = today.getMonth() + 1;
+    var year = today.getFullYear();
+
+    var x = document.getElementById("td-date");
+    if (month < 10)
+        x.innerHTML = "Today is " + day + "/0" + month + "/" + year;
+    else 
+        x.innerHTML = "Today is " + day + "/" + month + "/" + year;
+
+    var dayWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var menu = ["Sorry we close on", "Baked vegatables and Cheese", "Pizza", "Vegatable Fried Rice", "Bread Rolls", "Cheese Toast", "Sorry we close on"];
+
+    x = document.getElementById("order");
+
+    function order() {
+        var td = document.getElementById("sl-date").value;
+        var today2 = new Date(td);
+        var dWeek = today2.getDay();
+        if (dWeek == 0 || dWeek == 6)
+            x.innerHTML = "You order is made for " + dayWeek[dWeek] + ". " + menu[dWeek] + " " + dayWeek[dWeek];
+        else 
+            x.innerHTML = "You order is made for " + dayWeek[dWeek] + ". We serve " + menu[dWeek];
+    }    
+
+    function clearDate() {
+        x.innerHTML = "Please select a date to order."
+    }
+</script>

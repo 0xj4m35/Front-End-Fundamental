@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX1</title>
+</head>
+<body>
+    <div id="table"></div>
+</body>
+</html>
+<script>
+    var table = document.createElement('table');
+    var row;
+    var header = table.createTHead();
+    row = header.insertRow(0);
+    row.insertCell(0).innerHTML = 'Roll No.';
+    row.insertCell(1).innerHTML = 'Name';
+    row.insertCell(2).innerHTML = 'Subject';
+    row.insertCell(3).innerHTML = 'Mark';
+    
+    var body = table.createTBody();
+    row = body.insertRow(0);
+    row.insertCell(0).innerHTML = 'SE00001';
+    row.insertCell(1).innerHTML = 'Nguyễn Văn A';
+    row.insertCell(2).innerHTML = 'Javascript';
+    row.insertCell(3).innerHTML = '9.9';
+
+    document.getElementById('table').appendChild(table);
+</script>

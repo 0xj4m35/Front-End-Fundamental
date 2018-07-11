@@ -1,0 +1,52 @@
+.header {
+	background-color: white;
+	text-align: center;
+	height: 100px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	float: left;
+	padding: 16px;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+li:hover {
+	background-color: green;
+	color: blue;
+}
+
+.navigation {
+	background-color: black;
+	height: 50px;
+	color: white;
+}
+.main-content {
+	background-color: lightblue;
+	height: 200px;
+	width: 60%;
+	float: left;
+}
+.content-1 {
+	background-color: grey;
+	height: 200px;
+	width: 20%;
+	float: left;
+}
+.content-2 {
+	background-color: green;
+	height: 200px;
+	width: 20%
+	float: left;
+}
+.footer {
+	background-color: aqua;
+	height: 100px;
+	clear: both;
+}

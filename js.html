@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to JS</title>
+</head>
+<script type="text/javascript">
+	var c = 0; // Number
+	c = "Alibaba"; // String
+	c = new Date(); //Object
+	c = true;	// Boolean
+	c = 0;
+	function show() {
+		c++;
+		if (c % 2 != 0) {
+			document.getElementById("heading").innerHTML = "Show this section. Click me!";
+		} else {
+			document.getElementById("heading").innerHTML = "Hide this section. Click me!";
+		}
+	}
+	function bold() {
+		var p = document.getElementsByName("para")[0];
+		var checkbox = document.getElementsByName("chk")[0];
+		if (checkbox.checked) {
+			p.style.fontWeight = "bold";
+		} else {
+			p.style.fontWeight = "normal";
+		}
+	}
+	function turn() {
+		var check = document.getElementsByName("display")[0];
+		if (check.checked) {
+			document.body.style.color ="black";
+			document.body.style.backgroundColor = "white";
+		}
+		else {
+			document.body.style.color ="white";
+			document.body.style.backgroundColor = "grey";
+		}
+	}
+
+</script>
+
+<body>
+	<h1 id="heading" onclick="show()">Hide this section. Click me!</h1>
+	<p>
+		<input type="checkbox" name="chk" onclick="bold()">Bold
+		<p name="para">The quick brown firefox</p>
+	</p>
+	<p>
+		<input type="radio" name="display" onclick="turn()" checked>ON
+		<input type="radio" name="display" onclick="turn()">OFF
+	</p>
+
+</body>
+</html>

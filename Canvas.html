@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+	<style type="text/css">
+		canvas {
+			border: solid 1px gray;
+			background-color: white;
+			width: 300px;
+			height: 150px; 
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = "#6decf";
+	ctx.fillRect(0, 30, 30, 30);
+	var x = 0, a = 0, b = canvas.width;
+	var run = true, runRec1 = true, runRec2 = false;
+	ctx.fillRect(b, 90, 30, 30);
+	ctx.fillRect(a, 90, 30, 30);
+	function updateCanvas() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		if (run)
+			x ++;
+		else
+			x --;
+		ctx.fillStyle = "#6decf";
+		ctx.fillRect(x, 30, 30, 30);
+		if (x == canvas.width - 30) 
+			run = false;
+		if (x == 0) 
+			run = true;
+
+		if (runRec1) 
+			a ++;
+		else
+			a --;
+		if (runRec2)
+			b ++;
+		else
+			b --;
+		ctx.fillRect(b, 90, 30, 30);
+		ctx.fillRect(a, 90, 30, 30);
+		if (b - a == 30){
+			runRec2 = true;
+			runRec1 = false;
+		}
+		if (a == 0) 
+			runRec1 = true;
+		if (b == canvas.width-30)
+			runRec2 = false;
+	}
+
+	setInterval(updateCanvas, 10);
+</script>

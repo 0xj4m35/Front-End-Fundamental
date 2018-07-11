@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valid Value</title>
+    <style>
+        .title {
+            color: blue;
+            border-bottom: solid 2px blue;
+        }
+        .right{
+            text-align: left;
+        }
+        .left {
+            text-align: right;
+        }
+        .err {
+            color: red;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="title">The bits I need to make you join my forum              </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="left">Given name</td>
+            <td class="right"><input type="text" id="name" placeholder="Your Name"></td>
+            <td name="error"  class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">Family name</td>
+            <td class="right"><input type="text" id="fName" placeholder="Your Family Name"></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">Password</td>
+            <td class="right"><input type="password" id="password"></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">Make sure it's right</td>
+            <td class="right"><input type="password" id="password2"></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="title">Random bits I don't need, I'm just curious              </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="left">Birthday</td>
+            <td class="right"><input type="date" id="date" ></td>
+            <td name="error"  class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">E-mail</td>
+            <td class="right"><input type="email" id="email" placeholder="Your Email"></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">Hide and seek location</td>
+            <td class="right"><textarea id="location" placeholder="Your location"></textarea></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="title">Answer me these questions three                         </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="left">What is your quest?</td>
+            <td class="right"><input type="text" id="quest" placeholder="I seek..." ></td>
+            <td name="error"  class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">What is your favorite color?</td>
+            <td class="right"><input type="color" id="color" ></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">What is the wind speed velocity of an unladen swallow?</td>
+            <td class="right"><input type="text" id = "wind"></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="title">Sanity checks                                           </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="left">How much wood would a woodchuck chuck if a woodchuck <br/> could chuck wood?</td>
+            <td class="right">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </td>
+            <td name="error"  class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">How possessed by Santa are you wight now?</td>
+            <td class="right"><input type="range" id="santa" value="50" ></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td class="left">Who you gonna call?</td>
+            <td class="right"><input type="text" id = "call"></td>
+            <td name="error" class="err"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Register!" onclick="check()" ></td>
+            <td name="error" class="err"></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function check() {
+        var na = document.getElementById("name");
+        if (na.value == ""){
+            document.getElementsByName("error")[0].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[0].innerHTML = "";  
+        
+        
+        na = document.getElementById("fName");
+        if (na.value == ""){
+            document.getElementsByName("error")[1].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[1].innerHTML = "";   
+    
+        na = document.getElementById("password");
+        if (na.value == ""){
+            document.getElementsByName("error")[2].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[2].innerHTML = "";   
+        
+
+        var nax = document.getElementById("password2");
+        if((nax.value == "") || (na.value != nax.value)) {
+            document.getElementsByName("error")[3].innerHTML = "Invalid data.";
+            return;
+        }
+            document.getElementsByName("error")[3].innerHTML = "";   
+        
+        na = document.getElementById("date");
+        if (na.value == ""){
+            document.getElementsByName("error")[4].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[4].innerHTML = "";   
+        
+        na = document.getElementById("email");
+        if (!na.value.endsWith("@gmail.com")){
+            document.getElementsByName("error")[5].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[5].innerHTML = "";   
+        
+        na = document.getElementById("location");
+        if (na.value == ""){
+            document.getElementsByName("error")[6].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[6].innerHTML = "";   
+        
+        na = document.getElementById("quest");
+        if (na.value == ""){
+            document.getElementsByName("error")[7].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[7].innerHTML = "";   
+        
+        na = document.getElementById("wind");
+        if (na.value == ""){
+            document.getElementsByName("error")[9].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[9].innerHTML = "";   
+        
+        na = document.getElementById("call");
+        if (na.value == ""){
+            document.getElementsByName("error")[12].innerHTML = "Invalid data.";
+            return;
+        }
+        else 
+            document.getElementsByName("error")[12].innerHTML = "";   
+        
+        document.getElementsByName("error")[13].innerHTML = "SUCCESS!!!";
+    }
+</script>

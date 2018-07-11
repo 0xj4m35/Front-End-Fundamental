@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DIV</title>
+    <style>
+        .div1 {
+            background-color: pink;
+            width: 200px;
+            height: 50px;
+        }
+        .div2 {
+            background-color: palegreen;
+            border: 2px dashed violet;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>Here is a div. Click the button below to change its style!</p>
+    <input type="button" value="Change style of the div" onclick="change()">
+    <div class="div1" id="divid">
+        <p>This is a div!</p>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    var x = true;
+    var y = document.getElementById("divid");
+    function change() {
+        if (x){
+            y.setAttribute("class", "div1");
+            x = false;
+        } 
+        else {
+            y.setAttribute("class", "div2");
+            x = true;
+        }       
+    }
+</script>

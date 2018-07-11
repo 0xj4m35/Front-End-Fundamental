@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OOP JS</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script type="text/javascript">
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.print = function() {
+            document.write("<p>name = " + this.name);
+            document.write("<p>age = " + age);
+        }
+    }
+    var choi = new Person("choi", 2);
+    choi.print();
+    document.write("<p>choi.name = " + choi.name);
+    document.write("<p>choi.age = " + choi.age);
+
+    with (choi) {
+        print();
+        document.write("<p>choi.name = " + name);
+        document.write("<p>Choi.age = " + age);
+    }
+</script>

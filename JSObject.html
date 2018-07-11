@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Object</title>
+</head>
+<body>
+    <p id="time"></p>
+</body>
+</html>
+<script type="text/javascript">
+    var s = "the quick firefox";
+    s = s.replace("e","E"); // thE quick firefox
+    document.write("s.replace = " + s);
+    s = s.replace(/e/ig,"End"); // thEnd quick firEndfox
+    document.write("<p>s.replace(ig) = " + s);
+    var i = s.search("Quick"); //-1
+    document.write("<p>s.search(Quick) = " + i);
+    var n = "123-1234567";
+    var pattern = /^[0-9]{2,4}\-[0-9]{6,8}$/;
+    if (pattern.test(n)) {
+        document.write("<p>number is valid");
+    } else {
+        document.write("<p>number is invalid");
+    }
+    function showTime() {
+        var today = new Date();
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        var second = today.getSeconds();
+        var time = hour + ":" + minute + ":" + second;
+        document.getElementById("time").innerHTML = time;
+    }
+    setInterval(showTime, 1000);
+</script>

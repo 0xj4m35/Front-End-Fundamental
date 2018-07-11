@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+    <style>
+        div {
+            background-color: blanchedalmond;
+            width: 400px;
+        }
+        span {
+            font-style: italic;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Đo chỉ số BMI</p>
+    <div>
+        <input type="text" id="hei" placeholder="Chiều cao (cm)">
+        <input type="text" id="wei" placeholder="Cân nặng (kg)">
+        <br/>
+        <br/>
+        <input type="button" value="Xem kết quả" onclick="doFun()">
+        <span id="err"></span>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    function doFun() {
+        var cc = document.getElementById("hei").value;
+        var cn = document.getElementById("wei").value;
+        var er = document.getElementById("err");
+
+        if (isNaN(cc) || cc == ""){
+            er.innerHTML = "Chiều cao phải là số";
+            return;
+        }
+        er.innerHTML = "";
+        if (isNaN(cn) || cn == "") {
+            er.innerHTML = "Cân nặng phải là số";
+            return;
+        }
+        er.innerHTML = "";
+
+        var x = parseFloat(cc) / 100;
+        var y = parseFloat(cn);
+        var bmi = y / (x*x);
+
+        if(bmi <= 18.5){
+            alert("Thiếu cân");
+        }
+        else 
+        if (bmi > 18.5 && bmi <= 25)
+            alert("Bình thường");
+        else
+        if (bmi > 25 && bmi <= 30)
+            alert("Thừa cân");
+        else
+        if (bmi > 30)
+            alert("Béo phì");
+    }
+</script>

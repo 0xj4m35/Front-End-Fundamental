@@ -1,0 +1,61 @@
+input[type=text] {
+	width: 100%;
+	padding: 12px 30px;
+	color: gray;
+	background-image: url('media/search.png');
+	background-repeat: no-repeat;
+	background-position: 12px 10px;
+}
+
+input[type=button] {
+	background-color: white;
+ 	color: #00ccff;
+ 	border: 2px solid #00ccff;
+
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	width: 100%;
+}
+
+
+
+input[type=text]:first-child {
+	background-color: tomato;
+}
+input[type=text]:focus {
+	background-color: yellow;
+}
+
+input[type=button]:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #00ccff;
+    color: white;
+}
+
+tr:nth-child(even) {
+	background-color:  #cccc99;
+}
+
+p:first-letter {
+	font-size: 300%;
+}
+
+table {
+	border-collapse: collapse;
+
+}
+
+th, td {
+	border-bottom: 1px solid #ddd;
+	padding: 10px 10px;
+}
+
+body {
+	font-family: "Comic Sans MS", Impact, sans-serif;
+}
+
+p::selection {
+	background-color: yellow;
+}
+

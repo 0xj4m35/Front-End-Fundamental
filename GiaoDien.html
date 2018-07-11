@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style type="text/css">
+        span {color: red; font-style: italic;}
+    </style>
+</head>
+<body>
+    <form>
+        <p>Enter your name: <input type="text" id="name"></p>
+        <span id="nameError"></span>
+        <p>Select role: <input type="radio" name="role" value="Admin">Admin
+            <input type="radio" name="role" value="User">User
+        </p>
+        <span id="roleError"></span>
+        <p>Birth date: <input type="date" id="date">
+            <span id="dateError"></span>
+        </p>
+
+        <input type="button" value="Submit" onclick="doCheck()">
+        </br>
+        <p id="summary"></p>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+
+    function doCheck() {
+        var name = document.getElementById("name").value.trim();
+        if (name == "") {
+            document.getElementById("nameError").innerHTML = "Invalid Name";
+            return;
+        }
+        else
+            document.getElementById("nameError").innerHTML = "";
+        var role1 = document.getElementsByName("role")[0].checked;
+        var role2 = document.getElementsByName("role")[1].checked;
+        if (!role1 && !role2){
+            document.getElementById("roleError").innerHTML = "Invalid role";
+            return;
+        }
+        else 
+            document.getElementById("roleError").innerHTML = "";
+
+        var dob = document.getElementById("date").value;
+        if (dob == "") {
+            document.getElementById("dateError").innerHTML = "Invalid date";
+            return;
+        }
+        else
+            document.getElementById("dateError").innerHTML = "";
+        var ro = "";
+        if (role1)
+            ro = document.getElementsByName("role")[0].value;
+        else 
+            ro = document.getElementsByName("role")[1].value;
+
+        var today = new Date();
+        var yCus =  new Date(dob);
+        var age = today.getFullYear() - yCus.getFullYear();
+
+        var x = document.getElementById("summary");
+        x.innerHTML = "Name = " + name + ", Role = " + ro + ", Age = " + age;     
+    }
+</script>

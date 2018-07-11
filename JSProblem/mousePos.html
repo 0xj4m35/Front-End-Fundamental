@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Position</title>
+    <style>
+        canvas {
+            width: 800px;
+            height: 500px;
+            border: solid 2px black;
+            background-color: aquamarine;
+        }
+        p {
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a Canvas, move the mouse inside it:</p>
+    <p id="mySp">Mouse position: </p>
+    <canvas id="myCanvas" onmousemove="show()"></canvas>
+</body>
+</html>
+<script>
+    function show() {
+        var z = document.getElementById("mySp");
+        var x = event.clientX;
+        var y = event.clientY;
+        z.innerHTML = "Mouse position:  +X coords: " + x + ", +Y coords: " + y;
+    }
+</script>

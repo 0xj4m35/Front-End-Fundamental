@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Input</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 10px auto;
+        }
+        div {
+            background-color: pink;
+            font-weight: bold;
+            color: black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Type some text in this input field:
+        <input type="text" id="inp" placeholder="Text something">
+    </p>
+    <p>You are typing: </p>
+    <div>
+        <span id="outp"></span>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById("inp").addEventListener("input", show)
+    function show() {
+        var c = document.getElementById("inp");
+        var x = document.getElementById("outp");
+        x.innerHTML = c.value;
+    }
+</script>
